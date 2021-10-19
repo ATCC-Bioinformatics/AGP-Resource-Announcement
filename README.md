@@ -16,8 +16,7 @@ General details on the lab methods and bioinformatics pipelines used to create t
 * **Oxford Nanopore QC:** The latest version of ONT's MinKNOW is used to base-call, using the high accuracy settings, demultiplex, and barcode trim. Futhermore, ONT sequencing reads were quality trimmed and filtered using Filtlong to meet the following minimum acceptance criteria: minimum mean Q score per read > 10, minimum read length > 5000 bp 23.
 * **Read-Based Contamination QC:** We use the [One Codex](https://www.onecodex.com) microbial genomics platform to perform read-level k-mer–based taxonomic classification and estimation of strain abundances on all our processed Illumina read sets, which represent a highly-accurate snap shot of a given DNA extraction. A minimum of 1,000,000 Illumina reads per sequenced sample is required to undergo such analysis; Illumina read sets otherwise passing quality control criteria but possess less than 1,000,000 reads are sent for re-sequencing. When an Illumina read set is confirmed as an isolate by the One Codex platform, all read sets from that extraction continue to genome assembly. Please note that the results of this reads-based analysis are not currently presented on the portal but that all published genomes have passed our stringent thresholds for purity.
 * **de novo Assembly:** Genome assembly size is first estimated from raw reads using MASH, and this estimate was used to down-sample the Illumina and ONT raw sequencing libraries to a maximum 100x and 40x coverage respectively. After down-sampling each sequencing library, a hybrid de novo assembly approach was taken using Unicyler. Sequencing and assembly artifacts of less than 1000 bp that also had significantly different coverage depth (e.g., “chaff” contigs) were removed from the final draft reference. These draft assemblies were subsequently checked using One Codex to confirm the species. Finally, each draft assembly was checked for completeness and potential contamination with CheckM v1.12+. Assemblies which were determined to have a CheckM “completeness” score above 95% and a contamination value below 5% were deemed final, complete assembles. Each final bacterial assembly was subsequently annotated using Prokka v1.14 for CDS, rRNA, tRNA, signal leader peptides, and non-coding RNA identification.
-##
-##Software & Services Used
+## Software & Services Used
 * CheckM
 * fastp
 * FastQC
@@ -26,5 +25,5 @@ General details on the lab methods and bioinformatics pipelines used to create t
 * MinKnow
 * Prokka
 * Unicycler
-##References
+## References
 TBD
