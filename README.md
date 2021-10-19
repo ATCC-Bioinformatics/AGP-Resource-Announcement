@@ -22,7 +22,8 @@ General details on the lab methods and bioinformatics pipelines used to create t
 * FastQC
 * FiltLong
 * MASH
-* MinKnow
+* MinKnow - https://github.com/nanoporetech/minknow_api
+* One Codex - https://onecodex.com 
 * Prokka
 * Unicycler
 ## References
