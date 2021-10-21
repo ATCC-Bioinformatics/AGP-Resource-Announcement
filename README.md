@@ -17,17 +17,15 @@ General details on the lab methods and bioinformatics pipelines used to create t
 * **Read-Based Contamination QC:** We use the [One Codex](https://www.onecodex.com) microbial genomics platform to perform read-level k-mer–based taxonomic classification and estimation of strain abundances on all our processed Illumina read sets, which represent a highly-accurate snap shot of a given DNA extraction. A minimum of 1,000,000 Illumina reads per sequenced sample is required to undergo such analysis; Illumina read sets otherwise passing quality control criteria but possess less than 1,000,000 reads are sent for re-sequencing. When an Illumina read set is confirmed as an isolate by the One Codex platform, all read sets from that extraction continue to genome assembly. Please note that the results of this reads-based analysis are not currently presented on the portal but that all published genomes have passed our stringent thresholds for purity.
 * **de novo Assembly:** Genome assembly size is first estimated from raw reads using MASH, and this estimate was used to down-sample the Illumina and ONT raw sequencing libraries to a maximum 100x and 40x coverage respectively. After down-sampling each sequencing library, a hybrid de novo assembly approach was taken using Unicyler. Sequencing and assembly artifacts of less than 1000 bp that also had significantly different coverage depth (e.g., “chaff” contigs) were removed from the final draft reference. These draft assemblies were subsequently checked using One Codex to confirm the species. Finally, each draft assembly was checked for completeness and potential contamination with CheckM v1.12+. Assemblies which were determined to have a CheckM “completeness” score above 95% and a contamination value below 5% were deemed final, complete assembles. Each final bacterial assembly was subsequently annotated using Prokka v1.14 for CDS, rRNA, tRNA, signal leader peptides, and non-coding RNA identification.
 ## Software & Services Used
-* Busco
-* CheckM
-* fastp
-* FastQC
-* FiltLong
-* FLYE
-* MasUrca
-* MASH
+* Busco - https://gitlab.com/ezlab/busco/
+* CheckM - https://github.com/Ecogenomics/CheckM
+* fastp - https://github.com/OpenGene/fastp
+* FastQC - https://github.com/s-andrews/FastQC
+* FiltLong - https://github.com/rrwick/Filtlong
+* FLYE - https://github.com/fenderglass/Flye/
+* MasUrca - https://github.com/alekseyzimin/masurca
+* MASH - https://github.com/marbl/Mash
 * MinKnow - https://github.com/nanoporetech/minknow_api
 * One Codex - https://onecodex.com 
-* Prokka
-* Unicycler
-## References
-TBD
+* Prokka - https://github.com/tseemann/prokka
+* Unicycler - https://github.com/rrwick/Unicycler
